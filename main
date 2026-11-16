@@ -1,0 +1,294 @@
+# ===== Site settings =====
+title: My Reflection Journal
+description: "Personal reflections, project notes, and progress toward long-term goals."
+author: Your Name
+# Leave baseurl blank if your site lives at the root of the repo.
+# If your repo name is not yourusername.github.io, set baseurl to "/repo-name" later.
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# ===== Build settings (do not change unless you know why) =====
+markdown: kramdown
+theme: minima
+paginate: 10
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Show future-dated posts if you schedule one ahead of time
+future: true
+
+# ===== Navigation =====
+# These appear as links in the top menu on the minima theme.
+header_pages:
+  - index.md
+  - goals.md
+
+
+---
+layout: home
+title: Home
+---
+
+## About this journal
+
+This site is my ongoing reflection journal. I write dated entries about my schoolwork,
+projects, challenges, and milestones, and track my progress toward my long-term goals.
+
+It is a self-directed project: a static website built with Jekyll and hosted on GitHub Pages.
+There are no comments, logins, or visitor interaction. Every entry here is written and
+maintained by me.
+
+## How to read this site
+
+- **Journal entries** appear below, newest first. Each entry has a date and a short reflection.
+- **[Goals](goals.md)** lists my long-term goals broken into smaller benchmarks, with status updates.
+
+## Why I built this
+
+Keeping a dated log helps me notice my own growth over time. It also doubles as a public
+record of how I approach learning, problem-solving, and project work.
+---
+layout: page
+title: Long-Term Goals
+permalink: /goals/
+---
+
+## Long-term direction
+
+A short paragraph here: the field or direction I am working toward, and why it matters to me.
+(Example: biotechnology, understanding how genes and cells work, and contributing to medical
+research that helps people.)
+
+## Goal 1: [Goal title]
+
+- **Why it matters:** one or two sentences.
+- **Benchmarks:**
+  - [ ] Small step one
+  - [ ] Small step two
+  - [ ] Small step three
+- **Status:** In progress
+- **Last updated:** 2026-11-16
+
+## Goal 2: [Goal title]
+
+- **Why it matters:** one or two sentences.
+- **Benchmarks:**
+  - [ ] Small step one
+  - [ ] Small step two
+- **Status:** Not started
+- **Last updated:** 2026-11-16
+
+## Goal 3: [Goal title]
+
+- **Why it matters:** one or two sentences.
+- **Benchmarks:**
+  - [ ] Small step one
+- **Status:** Not started
+- **Last updated:** 2026-11-16
+
+## Milestone log
+
+| Date | Milestone | Note |
+| --- | --- | --- |
+| 2026-11-16 | Started this journal | First entry published |
+# Reflection Journal — Jekyll Starter Kit
+
+A beginner-friendly static journal website built with **Jekyll** and hosted free on **GitHub Pages**.
+No comments, no login, no visitor interaction. You write Markdown files, commit them, and the
+site rebuilds itself.
+
+## What is in this folder
+
+```
+reflection-journal/
+├── _config.yml        # Site title, description, theme, menu links
+├── index.md           # Homepage: about this journal + list of entries
+├── goals.md           # Permanent long-term goals page
+└── _posts/
+    └── 2026-11-16-welcome.md   # A sample journal entry (copy this for new ones)
+```
+
+---
+
+## PART A — One-time setup on GitHub (about 15 minutes)
+
+### 1. Make a GitHub account
+1. Go to <https://github.com> and click **Sign up**.
+2. Use an email you check, set a password, and verify the account.
+
+### 2. Create a new repository
+1. Click the **+** icon (top right) → **New repository**.
+2. Fill in:
+   - **Repository name:** choose one, e.g. `reflection-journal`.
+     - If you want your main site at `https://yourusername.github.io`, name it exactly
+       `yourusername.github.io` (replace with your real username).
+   - **Visibility:** select **Public** (GitHub Pages free hosting needs a public repo).
+   - **Add a README file:** leave unchecked for now.
+3. Click **Create repository**.
+
+### 3. Upload these starter files
+You will put the four files from this folder into your new repo.
+
+**Easiest way (drag and drop):**
+1. On your new repo page, click **Add file** → **Upload files**.
+2. Open this `reflection-journal` folder on your computer.
+3. Drag the whole folder's contents into the upload area:
+   - `_config.yml`
+   - `index.md`
+   - `goals.md`
+   - the `_posts` folder (with the sample `.md` inside it)
+4. At the bottom, under **Commit changes**, leave the message as "Add starter files", then
+   click **Commit changes**.
+
+> If drag-and-drop does not keep the `_posts` folder, create it manually:
+> **Add file** → **Create new file**, type `_posts/2026-11-16-welcome.md` in the name box
+> (the `/` makes the folder), then paste the content.
+
+### 4. Turn on GitHub Pages
+1. Inside your repo, click **Settings** (top menu bar).
+2. On the left sidebar, under **Code and automation**, click **Pages**.
+3. Under **Build and deployment**:
+   - **Source:** choose **Deploy from a branch**.
+   - **Branch:** choose `main`, folder `/ (root)`.
+4. Click **Save**.
+
+### 5. Wait, then open your site
+- Give it 1–10 minutes for the first build.
+- Your address will be:
+  - `https://yourusername.github.io` (if the repo is named `yourusername.github.io`)
+  - `https://yourusername.github.io/reflection-journal/` (any other repo name)
+- Refresh until the page appears. If it shows a 404 at first, the build is still running.
+
+### 6. Update `_config.yml` to match your real name and URL
+Open `_config.yml` in the repo and edit:
+- `author: Your Name` → your name.
+- `url:` → your real site URL.
+- If your repo name is **not** `yourusername.github.io`, set `baseurl:` to `"/reflection-journal"`
+  (use your actual repo name).
+- Commit the change.
+
+---
+
+## PART B — How to add a new journal entry (the only daily task)
+
+Every reflection is one Markdown file inside the `_posts` folder.
+
+1. In your repo, go into the `_posts` folder.
+2. **Add file** → **Create new file**.
+3. Name it strictly: `YYYY-MM-DD-short-title.md`
+   - Example: `2026-11-20-biotech-project-reflection.md`
+   - The date must be real and in this exact format, or the entry will not show up.
+4. Copy this template at the top of the file:
+
+```markdown
+---
+layout: post
+title: "Reflection - Nov 20"
+date: 2026-11-20
+tags: [biotech]
+---
+
+## What I worked on today
+
+-
+
+## Progress toward my goals
+
+- **Goal 1:**
+
+## What was hard
+
+-
+
+## What I learned
+
+-
+
+## Next step
+
+-
+```
+
+5. Write your reflection below the `---` line.
+6. Scroll down → **Commit changes**. The entry appears on the homepage within a few minutes,
+   newest first.
+
+### Markdown quick reference
+- `## Heading` → subheading
+- `- item` → bullet list
+- `**bold**` → bold
+- `[link text](https://...)` → a link
+- Leave a blank line between paragraphs.
+
+---
+
+## PART C — How to update your goals page
+
+1. Open `goals.md` in the repo.
+2. Click the pencil icon (**Edit this file**).
+3. Change the goal titles, check off benchmarks with `[x]`, and update the **Last updated** date.
+4. **Commit changes.**
+
+---
+
+## PART D — Important rules and limits
+
+- **This site is public.** Anyone with the link can read it. Do not put private diary feelings,
+  passwords, or personal details here. Keep it to school projects, learning notes, and goal
+  progress. Save truly private writing in a private app instead.
+- **No online writing box.** This is a static site: you cannot type into a form on the webpage
+  and have it save. You add each entry as a file. (That is normal for this kind of project and
+  worth explaining in a college interview.)
+- **No comments, likes, or accounts** are set up, which matches what you wanted.
+- Files must end in `.md` (Markdown) for posts.
+
+---
+
+## PART E — Troubleshooting
+
+| Problem | Fix |
+| --- | --- |
+| 404 error after enabling Pages | Wait a few more minutes; check Settings → Pages shows "Your site is live". Make sure branch is `main`, folder `/ (root)`. |
+| My new entry does not appear | Check the filename starts with a valid date `YYYY-MM-DD-`, and the file is inside `_posts`. |
+| Site styling looks broken / plain | Confirm `theme: minima` is in `_config.yml` and you committed it. |
+| Links between pages are 404 | Match `baseurl` in `_config.yml` to your repo name (see step 6). |
+| Page updates slowly | GitHub rebuilds in 1–10 minutes after each commit; refresh later. |
+
+## Optional later upgrades
+- Install GitHub Desktop or VS Code to write entries offline, then push them up.
+- Add a simple custom color scheme later once the basics work.
+- Add tags and a tags page.
+---
+layout: post
+title: "Welcome to the journal"
+date: 2026-11-16
+tags: [intro]
+---
+
+This is my first journal entry. From now on, every reflection I add will be a new file in the
+`_posts` folder, named with the date first.
+
+## What I worked on today
+
+- Set up this static website with Jekyll and GitHub Pages.
+- Wrote down my long-term goals on the Goals page.
+
+## Progress toward my goals
+
+- **Goal 1:** Created a place to record consistent reflections over time.
+
+## What was hard
+
+- Understanding how Jekyll turns Markdown files into a finished website.
+
+## What I learned
+
+- A static site has no database: I add a new Markdown file, commit it, and the site rebuilds
+  itself automatically.
+
+## Next step
+
+- Write one short reflection after each major project or study milestone.
